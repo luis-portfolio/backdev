@@ -35,6 +35,7 @@ const resource = req => {
 
 server.use((req, res, next) => {
     if (req.originalUrl = "/users") resource(req)
+    if (req.originalUrl = "/books") resource(req)
     next()
 })
 
