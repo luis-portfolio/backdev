@@ -28,13 +28,13 @@ server.use(STORAGE_ROUTE, static(STORAGE_PATH))
 server.use(middlewares)
 server.use(upload.any())
 
-const apply = req => {
+const resource = req => {
     const { id, created_at, updated_at, ...body } = req.body
     req.body = { id: +id, ...body, image, created_at, updated_at }
 }
 
 server.use((req, res, next) => {
-    if (req.originalUrl = "/users") apply(req)
+    if (req.originalUrl = "/users") resource(req)
     next()
 })
 
