@@ -1,0 +1,23 @@
+_id: req_160a0f66eee44823b65742764f62b2d3
+type: Request
+parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
+modified: 1667570009864
+created: 1667569761790
+url: "{{ _.host }}/users/1"
+name: Destroy 1
+description: ""
+method: DELETE
+body:
+  mimeType: ""
+  text: ""
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1667569761790
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

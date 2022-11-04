@@ -1,0 +1,52 @@
+_id: req_5d4bb341bf7e4b40b541130c6245a455
+type: Request
+parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
+modified: 1667570691812
+created: 1667569761745
+url: "{{ _.host }}/users"
+name: store John Doe
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - name: name
+      value: John Doe
+      id: pair_e6abc37450314208bd16299ce02693e5
+    - name: mobile
+      value: +55 (98) 9 9111 2233
+      id: pair_d892cc6c81fd4d1fafa0a9e3c29cab97
+    - name: email
+      value: johndoe@gmail.com
+      id: pair_d0b070f39d684593af5f5efd77c6506c
+    - name: password
+      value: "123"
+      id: pair_3eac475d2e9e48c9803685d2bc0ce957
+    - name: image
+      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.jpg
+      id: pair_8dfd2b2f15e146608e5a5b960b2f8ae4
+      type: file
+      value: ""
+    - name: image
+      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.pdf
+      id: pair_03fc0ba0d7e84a0da1d994722c177f4a
+      type: file
+      value: ""
+    - name: image
+      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.png
+      id: pair_061a4fb99ddf49478cbda32a41d8f375
+      type: file
+      value: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+authentication: {}
+metaSortKey: -1667569761745
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,14 @@
+_id: env_e210ad6c6a5c4553bee587a6a24ff57d
+type: Environment
+parentId: env_abd06225ccc7f7640a645df7c808fffb9277be45
+modified: 1667569828815
+created: 1667569799200
+name: Cloud
+data:
+  host: http://localhost:3000
+dataPropertyOrder:
+  "&":
+    - host
+color: null
+isPrivate: false
+metaSortKey: 1667569799200
