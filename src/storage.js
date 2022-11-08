@@ -2,12 +2,12 @@ const { static } = require("express")
 const { mkdirSync } = require("fs")
 const { join, extname } = require("path")
 const multer = require("multer")
-const adapter = require("./adapter")
 
-const STORAGE_ROUTE = "/image"
-const STORAGE_FOLDER = join(__dirname, "../store/images")
+const STORAGE_ROUTE = "/files"
+const STORAGE_FOLDER = join(__dirname, "../store/files")
 const STORAGE_DB = join(__dirname, "../store/data/db.json")
 const STORAGE_PATH = static(STORAGE_FOLDER)
+
 mkdirSync(STORAGE_FOLDER, { recursive: true })
 
 var storeAdapter = multer.diskStorage({
@@ -24,7 +24,6 @@ var storage = multer({ storage: storeAdapter }).any()
 module.exports = {
     STORAGE_DB,
     STORAGE_ROUTE,
-    STORAGE_PATH,    
-    storage,
-    adapter
+    STORAGE_PATH,
+    storage
 }
