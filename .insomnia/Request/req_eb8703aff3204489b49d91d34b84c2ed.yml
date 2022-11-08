@@ -1,15 +1,13 @@
 _id: req_eb8703aff3204489b49d91d34b84c2ed
 type: Request
 parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
-modified: 1667570001062
+modified: 1667824506757
 created: 1667569761803
 url: "{{ _.host }}/users"
 name: Index
 description: ""
 method: GET
-body:
-  mimeType: ""
-  text: ""
+body: {}
 parameters: []
 headers: []
 authentication: {}

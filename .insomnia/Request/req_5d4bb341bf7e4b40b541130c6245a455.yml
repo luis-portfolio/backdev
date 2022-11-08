@@ -1,7 +1,7 @@
 _id: req_5d4bb341bf7e4b40b541130c6245a455
 type: Request
 parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
-modified: 1667570691812
+modified: 1667932258600
 created: 1667569761745
 url: "{{ _.host }}/users"
 name: store John Doe
@@ -23,17 +23,7 @@ body:
       value: "123"
       id: pair_3eac475d2e9e48c9803685d2bc0ce957
     - name: image
-      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.jpg
-      id: pair_8dfd2b2f15e146608e5a5b960b2f8ae4
-      type: file
-      value: ""
-    - name: image
-      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.pdf
-      id: pair_03fc0ba0d7e84a0da1d994722c177f4a
-      type: file
-      value: ""
-    - name: image
-      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\file.png
+      fileName: C:\Users\Luis\Projects\NodeJs\backdev\sample-data\foto2.png
       id: pair_061a4fb99ddf49478cbda32a41d8f375
       type: file
       value: ""
