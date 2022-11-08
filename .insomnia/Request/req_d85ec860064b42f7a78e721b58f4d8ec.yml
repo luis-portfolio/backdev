@@ -1,0 +1,23 @@
+_id: req_d85ec860064b42f7a78e721b58f4d8ec
+type: Request
+parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
+modified: 1667570015346
+created: 1667569761782
+url: "{{ _.host }}/users/2"
+name: Show 2
+description: ""
+method: GET
+body:
+  mimeType: ""
+  text: ""
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1667569761782
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
