@@ -1,15 +1,13 @@
 _id: req_092bdfcc253847b8bca427f41b8dc266
 type: Request
 parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
-modified: 1667570005522
+modified: 1667824337824
 created: 1667569761797
 url: "{{ _.host }}/users/1"
 name: Show 1
 description: ""
 method: GET
-body:
-  mimeType: ""
-  text: ""
+body: {}
 parameters: []
 headers: []
 authentication: {}
