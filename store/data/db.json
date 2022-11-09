@@ -98,6 +98,16 @@
         "1667938363042.png"
       ],
       "created_at": "2022-11-08T20:12:43.063Z"
+    },
+    {
+      "name": "Luis Nt",
+      "mobile": "+55 (98) 9 8111 2233",
+      "email": "luisnt@gmail.com",
+      "password": "123",
+      "image": [
+        "1668005153020.jpg"
+      ],
+      "id": 3
     }
   ]
 }

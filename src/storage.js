@@ -12,7 +12,7 @@ mkdirSync(STORAGE_FOLDER, { recursive: true })
 
 var storeAdapter = multer.diskStorage({
     destination: (req, file, callback) => callback(null, STORAGE_FOLDER),
-    filename: (req, file, callback) => {
+    filename: (req, file, callback) => { 
         req.body['image'] = req.body['image'] || []
         req.body.image.push(Date.now() + (extname(file.originalname) || ".jpg"))
         callback(null, req.body.image[(req.body.image.length - 1)])

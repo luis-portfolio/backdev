@@ -1,20 +1,25 @@
 const { STORAGE_DB, STORAGE_ROUTE, STORAGE_PATH, storage } = require("./storage")
 const { Observer, ObserverBody, AdapterBody } = require("./adapter")
+const { Login, AuthMiddleware } = require("./auth")
 
-const jsonServer = require("json-server")
-const server = jsonServer.create()
-const middlewares = jsonServer.defaults()
-const router = jsonServer.router(STORAGE_DB)
+const { create, defaults, router } = require("json-server")
+const server = create()
+const jsonServerRouter = router(STORAGE_DB)
 
 const port = process.env.PORT || 3000
-
+server.use(defaults({ bodyParser: true }))
 server.use(STORAGE_ROUTE, STORAGE_PATH)
-server.use(middlewares)
 server.use(storage)
+
 server.use(ObserverBody)
 server.use(Observer)
+
 server.use(AdapterBody)
-server.use(router)
+
+server.post('/login', Login(jsonServerRouter))
+
+server.use(AuthMiddleware)
+server.use(jsonServerRouter)
 
 server.listen(port, () => {
     console.clear()

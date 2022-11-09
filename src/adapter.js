@@ -26,8 +26,6 @@ const Observer = globalObserver({
     },
     response: (body) => {
         console.log("response", body)
-        // body = false
-        // body.id = `${body.id}`
         return body
     }
 })
@@ -39,7 +37,6 @@ const ObserverBody = (req, res, next) => {
 
 const fieldsAdapter = req => {
     if (req.body === undefined) return
-
     const { id, image, created_at, updated_at, ...body } = req.body || { id: 0, image: [], created_at: null, updated_at: null }
     req.body = { id: +id, ...body, image, created_at, updated_at }
     if (req.method === 'POST') req.body.created_at = (new Date()).toISOString()
@@ -47,8 +44,9 @@ const fieldsAdapter = req => {
 }
 
 const AdapterBody = (req, res, next) => {
-    if (req.originalUrl = "/users") fieldsAdapter(req)
-    else if (req.originalUrl = "/books") fieldsAdapter(req)
+    const url = req.originalUrl.toLowerCase()
+    if (url === "/users") fieldsAdapter(req)
+    else if (url === "/books") fieldsAdapter(req)
     next()
 }
 
