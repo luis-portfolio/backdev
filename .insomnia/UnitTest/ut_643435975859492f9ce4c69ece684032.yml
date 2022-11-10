@@ -1,0 +1,14 @@
+_id: ut_643435975859492f9ce4c69ece684032
+type: UnitTest
+parentId: uts_64094b48f5d346719d5d1a18933f9ced
+modified: 1668104256216
+created: 1668017582228
+requestId: req_e8f0353a2251470989752f7b8e44d971
+name: users - Show image 1
+code: |-
+  const {status, data, headers } = await insomnia.send()
+  expect(200).to.equal(status)
+  expect(headers).to.have.property("content-type");
+  const contentType = headers["content-type"].split("/")[0]
+  console.log({data, contentType})
+  expect("image").to.equal(contentType)

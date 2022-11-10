@@ -1,7 +1,7 @@
 _id: req_092bdfcc253847b8bca427f41b8dc266
 type: Request
-parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
-modified: 1667824337824
+parentId: fld_f4c75421432e459a812dd4209fb947bf
+modified: 1668104155836
 created: 1667569761797
 url: "{{ _.host }}/users/1"
 name: Show 1
@@ -9,9 +9,16 @@ description: ""
 method: GET
 body: {}
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_b6924c254d1a470ba6ddb94aea06db5e
+  - name: Authorization
+    value: Bearer {% response 'body', 'req_dc676fc5674b46709558cc2f41c672c0',
+      'b64::JC50b2tlbg==::46b', 'when-expired', _.expiredAtSeconds %}
+    id: pair_8dfd9832d9ac4972a67500d94c9cb8f6
 authentication: {}
-metaSortKey: -1667569761797
+metaSortKey: -1668014740129
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
