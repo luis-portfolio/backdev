@@ -1,0 +1,27 @@
+_id: ut_42af7b03809348f3bc43e404284702db
+type: UnitTest
+parentId: uts_64094b48f5d346719d5d1a18933f9ced
+modified: 1668017371591
+created: 1668017339409
+requestId: req_d85ec860064b42f7a78e721b58f4d8ec
+name: users - Show 2
+code: |-
+  const {status, data } = await insomnia.send();
+  expect(data).to.be.an('string');
+  const body = JSON.parse(data)
+  expect(200).to.equal(status);
+  expect(body).to.be.an('object')
+  expect(body).to.have.property('id')
+  expect(body).to.have.property('name')
+  expect(body).to.have.property('mobile')
+  expect(body).to.have.property('email')
+  expect(body).to.have.property('password')
+  expect(body).to.have.property('image')
+  expect(body).to.have.property('created_at')
+  expect(body.id).to.be.an('number')
+  expect(body.name).to.be.an('string')
+  expect(body.mobile).to.be.an('string')
+  expect(body.email).to.be.an('string')
+  expect(body.password).to.be.an('string')
+  expect(body.image).to.be.an('array')
+  expect(body.created_at).to.be.an('string')

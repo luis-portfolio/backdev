@@ -1,7 +1,7 @@
 _id: req_676c659d86184bff8c621af1a2c36e29
 type: Request
-parentId: wrk_9c3074e2eae4487dbc4824f0d1625076
-modified: 1667570021428
+parentId: fld_f4c75421432e459a812dd4209fb947bf
+modified: 1668103824916
 created: 1667569761774
 url: "{{ _.host }}/users/2"
 name: Destroy 2
@@ -11,9 +11,14 @@ body:
   mimeType: ""
   text: ""
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: Authorization
+    value: Bearer {% response 'body', 'req_dc676fc5674b46709558cc2f41c672c0',
+      'b64::JC50b2tlbg==::46b', 'when-expired', _.expiredAtSeconds %}
 authentication: {}
-metaSortKey: -1667569761774
+metaSortKey: -1668014739979
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

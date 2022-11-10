@@ -1,0 +1,10 @@
+_id: ut_6e77e75c5e1545aca5460e03bf396253
+type: UnitTest
+parentId: uts_64094b48f5d346719d5d1a18933f9ced
+modified: 1668017409888
+created: 1668017388824
+requestId: req_676c659d86184bff8c621af1a2c36e29
+name: users - Destroy 2
+code: |-
+  const { status } = await insomnia.send();
+  expect(200).to.equal(status);

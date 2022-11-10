@@ -1,0 +1,13 @@
+_id: ut_862c60eb5f304cd5889c91dc5e356e12
+type: UnitTest
+parentId: uts_64094b48f5d346719d5d1a18933f9ced
+modified: 1668016505592
+created: 1668016267849
+requestId: req_eb8703aff3204489b49d91d34b84c2ed
+name: "users - Index "
+code: |-
+  const {status, data } = await insomnia.send();
+  expect(data).to.be.an('string');
+  const body = JSON.parse(data)
+  expect(200).to.equal(status);
+  expect(body).to.be.an('array')
