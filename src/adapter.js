@@ -44,9 +44,9 @@ const fieldsAdapter = req => {
 }
 
 const AdapterBody = (req, res, next) => {
-    const url = req.originalUrl.toLowerCase()
-    if (url === "/users") fieldsAdapter(req)
-    else if (url === "/books") fieldsAdapter(req)
+    let url = req.originalUrl.toLowerCase()
+    if (url.slice(0, 6) === "/users") fieldsAdapter(req)
+    else if (url.slice(0, 6) === "/books") fieldsAdapter(req)
     next()
 }
 

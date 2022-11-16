@@ -1,11 +1,11 @@
 {
   "name": "backdev",
   "version": "1.0.0",
-  "description": "Backend to development",
+  "description": "Development backend",
   "keywords": [],
   "author": "Luis Nt",
   "license": "MIT",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon ./src/main.js",
     "start": "node ./src/cluster.js",

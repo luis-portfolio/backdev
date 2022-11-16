@@ -1,11 +1,13 @@
 const { createHash } = require('crypto')
-const { join, extname } = require('path')
+const { join, extname, normalize } = require('path')
 const { existsSync, copyFileSync, unlinkSync, readFileSync, mkdirSync } = require('fs')
 
 const File = (() => {
     const ext = filename => extname(filename) || ""
 
     const path = (...paths) => join(...paths)
+
+    const relative = (dirname, filenane) => (normalize(dirname + '/' + filenane)).split('\\').join('/').split('//').join('/')
 
     const load = filename => (exists(filename) === false) ? "" : JSON.parse(readFileSync(filename))
 
@@ -58,6 +60,7 @@ const File = (() => {
     return {
         ext,
         path,
+        relative,
         md,
         exists,
         delete: erase,
