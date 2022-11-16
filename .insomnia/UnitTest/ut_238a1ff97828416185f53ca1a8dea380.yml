@@ -1,8 +1,8 @@
-_id: ut_0263331c970a46ddb95823b52227cd8c
+_id: ut_238a1ff97828416185f53ca1a8dea380
 type: UnitTest
-parentId: uts_64094b48f5d346719d5d1a18933f9ced
-modified: 1668104394512
-created: 1668019035538
+parentId: uts_e48e12f182b047fabee1e68130778e07
+modified: 1668612203086
+created: 1668605903799
 requestId: req_5d4bb341bf7e4b40b541130c6245a455
 name: users - Store John Doe
 code: >-
@@ -54,6 +54,6 @@ code: >-
 
   expect(body.password).to.equal("123")
 
-  expect(body.image[0]).to.equal('4fc000ef585a83191fc1a8a9f23821513357d27352206f8ea2908771d1e64f75.png')
+  expect(body.image[0]).to.equal('users/4fc000ef585a83191fc1a8a9f23821513357d27352206f8ea2908771d1e64f75.png')
 
   expect(body.created_at).not.to.be.equal('')

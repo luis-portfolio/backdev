@@ -1,0 +1,59 @@
+_id: ut_499b7844ef054dd98f39c5d3310ff9d6
+type: UnitTest
+parentId: uts_e48e12f182b047fabee1e68130778e07
+modified: 1668612194654
+created: 1668605878920
+requestId: req_10f1d5cce26e484d8e818ef26fcb93b7
+name: users - Store Luis Nt
+code: >-
+  const {status, data } = await insomnia.send();
+
+  expect(data).to.be.an('string');
+
+  const body = JSON.parse(data)
+
+  expect(201).to.equal(status);
+
+  expect(body).to.be.an('object')
+
+  expect(body).to.have.property('id')
+
+  expect(body).to.have.property('name')
+
+  expect(body).to.have.property('mobile')
+
+  expect(body).to.have.property('email')
+
+  expect(body).to.have.property('password')
+
+  expect(body).to.have.property('image')
+
+  expect(body).to.have.property('created_at')
+
+  expect(body.id).to.be.an('number')
+
+  expect(body.name).to.be.an('string')
+
+  expect(body.mobile).to.be.an('string')
+
+  expect(body.email).to.be.an('string')
+
+  expect(body.password).to.be.an('string')
+
+  expect(body.image).to.be.an('array')
+
+  expect(body.created_at).to.be.an('string')
+
+  expect(body.id).to.equal(1)
+
+  expect(body.name).to.equal("Luis Nt")
+
+  expect(body.mobile).to.equal("+55 (98) 9 8111 2233")
+
+  expect(body.email).to.equal("luisnt@gmail.com")
+
+  expect(body.password).to.equal("123")
+
+  expect(body.image[0]).to.equal('users/3374406d134f8d194b680d15b59a4d1998ee7e1f5c34de0e584e77bfd7d0f103.jpg')
+
+  expect(body.created_at).not.to.be.equal('')
