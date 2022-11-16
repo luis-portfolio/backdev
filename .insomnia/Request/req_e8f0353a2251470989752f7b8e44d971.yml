@@ -1,9 +1,9 @@
 _id: req_e8f0353a2251470989752f7b8e44d971
 type: Request
 parentId: fld_f4c75421432e459a812dd4209fb947bf
-modified: 1668104534722
+modified: 1668610635537
 created: 1667569761759
-url: "{{ _.host }}/files/{% response 'body',
+url: "{{ _.host }}/public/{% response 'body',
   'req_092bdfcc253847b8bca427f41b8dc266', 'b64::JC5pbWFnZVswXQ==::46b',
   'when-expired', _.expiredAtSeconds %}"
 name: Show  image 1

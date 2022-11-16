@@ -1,0 +1,15 @@
+_id: ut_5db2006d784a4630b5bd307dcae6c641
+type: UnitTest
+parentId: uts_e48e12f182b047fabee1e68130778e07
+modified: 1668612160900
+created: 1668605807509
+requestId: req_dc676fc5674b46709558cc2f41c672c0
+name: login
+code: |-
+  const {status, data } = await insomnia.send();
+  expect(data).to.be.an('string');
+  let {message, token} = JSON.parse(data)
+  expect(201).to.equal(status);
+  const msgExpect = "Authorization has been approved for provided credentials."
+  expect(msgExpect).to.equal(message.slice(0,msgExpect.length));
+  expect(token).to.be.an('string');
